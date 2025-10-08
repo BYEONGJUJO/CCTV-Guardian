@@ -1,0 +1,2 @@
+{"timestamp": "2025-10-03T09:19:24.147789Z", "level": "INFO", "message": "NETWORK: connection", "category": "network", "event_type": "connection", "src_ip": "192.168.1.xxx", "dst_ip": "192.168.1.xxx", "port": 554, "protocol": "TCP"}
+{"timestamp": "2025-10-03T09:19:24.147789Z", "level": "INFO", "message": "API: POST /api/login", "category": "api", "method": "POST", "endpoint": "/api/login", "src_ip": "192.168.1.xxx", "status_code": 200, "response_time_ms": 45.3, "username": "admin"}

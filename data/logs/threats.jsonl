@@ -1,0 +1,1 @@
+{"timestamp": "2025-10-03T09:19:24.147789Z", "level": "WARNING", "message": "THREAT: PORT_SCAN", "category": "network", "threat_type": "PORT_SCAN", "severity": "HIGH", "ports_scanned": 15, "src_ip_masked": "10.0.0.xxx"}

@@ -1,0 +1,42 @@
+@"
+# CCTV Guardian 설정 파일
+app:
+  name: "CCTV Guardian"
+  version: "0.1.0"
+  timezone: "UTC"
+  dashboard_port: 8080
+  auto_block_high_threats: true
+
+logging:
+  dir: "./data/logs"
+  rotation:
+    when: "D"
+    interval: 1
+    backup_count: 14
+  level: "INFO"
+  mask_ip: true
+
+alerts:
+  email_to: "security-team@example.com"
+  slack_webhook_env: "SLACK_WEBHOOK"
+  sms_api_key_env: "SMS_API_KEY"
+
+thresholds:
+  port_scan:
+    unique_ports: 10
+    window_sec: 60
+  ddos:
+    req_per_window: 100
+    window_sec: 60
+  brute_force:
+    max_attempts: 5
+    lockout_sec: 300
+
+ai:
+  anomaly:
+    contamination: 0.05
+    model_path: "./models/anomaly_detector.pkl"
+  adversarial:
+    epsilon: 0.05
+    model_path: "./models/video_classifier.h5"
+"@ | Out-File -FilePath config.example.yaml -Encoding UTF8
